@@ -1,0 +1,32 @@
+AppBundle\Entity\Event:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\EventRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        date:
+            type: datetime
+        userId:
+            type: integer
+            column: user_id
+        address:
+            type: string
+            length: 255
+        zipcode:
+            type: integer
+        city:
+            type: string
+            length: 255
+            column: City
+        isPrivate:
+            type: boolean
+            column: is_private
+    lifecycleCallbacks: {  }
