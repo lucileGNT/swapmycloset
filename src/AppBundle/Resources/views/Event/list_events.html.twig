@@ -1,0 +1,24 @@
+{% extends "AppBundle::layout.html.twig" %}
+
+
+{% block content %}
+<h2>Upcoming Events</h2>
+
+{% if events is empty %}
+<p>There is no upcoming event<br/>
+<a href="#">Create one !</a>
+</p>
+{% else %}
+{% for event in events%}
+<p class="events">
+	<div>{{ event.date|date("Y-m-d") }}</div>
+	<div>{{ event.name }}</div>
+	<div><span>{{ event.address }} - </span><span>{{ event.zipcode }} - </span><span>{{ event.city }}</span></div>
+	<div>{{ event.userId }}</div>
+	<div>0 items</div>
+	<div><a href="#">Participation request</a></div>
+</p>
+<hr/>
+{% endfor %}
+{% endif %}
+{% endblock %}

@@ -1,3 +1,7 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+list_events:
+    path:      /listEvents
+    defaults:  { _controller: AppBundle:Event:listEvents }

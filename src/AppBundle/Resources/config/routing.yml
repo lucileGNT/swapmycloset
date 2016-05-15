@@ -1,0 +1,12 @@
+
+list_events:
+    path:     /listEvents
+    defaults: { _controller: AppBundle:Event:listEvents }
+
+create_event:
+    path:     /createEvent
+    defaults: { _controller: AppBundle:Event:createEvent }
+
+show_event:
+    path:     /showEvent
+    defaults: { _controller: AppBundle:Event:showEvent }
