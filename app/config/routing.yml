@@ -2,6 +2,19 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
+    
 list_events:
-    path:      /listEvents
-    defaults:  { _controller: AppBundle:Event:listEvents }
+    path:     /
+    defaults: { _controller: AppBundle:Event:listEvents }
+
+create_event:
+    path:     /createEvent
+    defaults: { _controller: AppBundle:Event:createEvent }
+
+show_event:
+    path:     /showEvent
+    defaults: { _controller: AppBundle:Event:showEvent }
+
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

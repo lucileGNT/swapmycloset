@@ -1,6 +1,6 @@
 
 list_events:
-    path:     /listEvents
+    path:     /
     defaults: { _controller: AppBundle:Event:listEvents }
 
 create_event:
@@ -10,3 +10,11 @@ create_event:
 show_event:
     path:     /showEvent
     defaults: { _controller: AppBundle:Event:showEvent }
+
+    # redirecting the user home
+root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: list_events
+        permanent: true
